@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&family=Red+Hat+Display:wght@500;700;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Red+Hat+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    html,
+    body {
+      height: 100%;
+      padding: 0%;
+      margin: 0;
+    }
+
+    .order_summary {
+      max-width: 100%;
+      background: url(./images/pattern-background-desktop.svg);
+      background-size: 85%;
+      background-color: hsl(225, 100%, 94%);
+      background-repeat: repeat-x;
+      display: flex;
+      justify-content: center;
+      justify-self: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .order_summary .card {
+      max-width: 410px;
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px -4px hsl(224deg 23% 55%);
+    }
+
+    .order_summary .card .image,
+    img {
+      max-width: 100%;
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+    }
+
+    .order_summary .card img {
+      margin-bottom: 40px;
+    }
+
+    .order_summary .title {
+      margin-top: 0;
+      margin-top: 0;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 900;
+    }
+
+    .order_summary .card .decriptions {
+      width: 100%;
+      text-align: center;
+      color: hsl(224, 23%, 55%);
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .card .section_details {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .section_details .details {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: hsl(225, 100%, 98%);
+      justify-content: space-between;
+      border-radius: 0.5rem;
+      padding: 15px;
+    }
+
+    .details .name {
+      font-family: 'Red Hat Display', sans-serif;
+      padding: 0%;
+      margin: 0;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .details .date {
+      font-family: 'Red Hat Display', sans-serif;
+      padding: 0%;
+      margin: 0;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .section_details .details .year {
+      display: block;
+      margin-left: 10px;
+    }
+
+    .card .btn {
+      width: 100%;
+    }
+
+    .card .btn .btns {
+      max-width: 100%;
+    }
+
+    .card .btns .btn {
+      width: 100%;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      background: hsl(245, 75%, 52%);
+      border-radius: 0.5rem;
+      font-family: 'Red Hat Display', sans-serif;
+      box-shadow: 0 4px 20px -4px hsl(224deg 23% 55%);
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .card .btns .btn:hover {
+      background: hsl(245deg 75% 64%);
+    }
+
+    .card .btns .cancle_order {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-family: 'Red Hat Display', sans-serif;
+      color: hsl(224, 23%, 55%);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .card .btns .cancle_order:hover {
+      color: black;
+    }
+
+    .card .content {
+      padding: 0 35px 0 35px;
+      padding-bottom: 50px;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .change_link {
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    .change_link:hover {
+      text-decoration: none;
+      color: hsl(245, 75%, 52%);
+    }
+
+    @media only screen and (max-width: 375px) {
+      .order_summary .card {
+        max-width: 330px;
+      }
+
+      .order_summary .card img {
+        margin-bottom: 35px;
+      }
+
+      .card .content {
+        padding: 0 30px 0 30px;
+        padding-bottom: 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="order_summary">
+    <div class="card">
+      <div class="image">
+        <img src="./images/illustration-hero.svg" alt="" />
+      </div>
+      <div class="content">
+        <h2 class="title">Order Summary</h2>
+        <p class="decriptions">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <section class="section_details">
+          <div class="details">
+            <span class="logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                <g fill="none" fill-rule="evenodd">
+                  <circle cx="24" cy="24" r="24" fill="#DFE6FB" />
+                  <path fill="#717FA6" fill-rule="nonzero"
+                    d="M32.574 15.198a.81.81 0 00-.646-.19L20.581 16.63a.81.81 0 00-.696.803V26.934a3.232 3.232 0 00-1.632-.44A3.257 3.257 0 0015 29.747 3.257 3.257 0 0018.253 33a3.257 3.257 0 003.253-3.253v-8.37l9.726-1.39v5.327a3.232 3.232 0 00-1.631-.441 3.257 3.257 0 00-3.254 3.253 3.257 3.257 0 003.254 3.253 3.257 3.257 0 003.253-3.253V15.81a.81.81 0 00-.28-.613z" />
+                </g>
+              </svg>
+              <div class="year">
+                <h4 class="name"> Annual Plan </h4>
+                <h5 class="date"> $59.99/year </h5>
+              </div>
+            </span>
+            <a href="#" class="change_link"> Change </a>
+          </div>
+        </section>
+        <section class="btn_section">
+          <div class="btns">
+            <a href="#" class="btn">Proceed to Payment</a>
+            <a href="#" class="cancle_order">Cancel Order</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
